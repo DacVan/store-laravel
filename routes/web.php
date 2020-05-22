@@ -17,27 +17,71 @@ use Illuminate\Support\Facades\Route;
 // Xây dựng route project
 
 //Route Frontend
-Route::get('', 'FrontendController@GetIndex');
-Route::get('about', 'FrontendController@GetAbout');
-Route::get('cart', 'FrontendController@GetCart');
-Route::get('checkout', 'FrontendController@GetCheckout');
-Route::get('complete', 'FrontendController@GetComplete');
-Route::get('contact', 'FrontendController@GetContact');
-Route::get('detail', 'FrontendController@GetDetail');
-Route::get('shop', 'FrontendController@GetShop');
+Route::get('', 'frontend\IndexController@GetIndex');
+Route::get('about', 'frontend\IndexController@GetAbout');
+Route::get('contact', 'frontend\IndexController@GetContact');
 
-//Route Backend
+//login
+Route::get('login','frontend\LoginController@GetLogin');
+Route::post('login', 'frontend\LoginController@PostLogin');
 
-Route::get('addproduct','BackendController@GetAddProduct');
-Route::get('adduser','BackendController@GetAddUser');
-Route::get('category','BackendController@GetCategory');
-Route::get('detailorder','BackendController@GetDetailOrder');
-Route::get('editcategory','BackendController@GetEditCategory');
-Route::get('editproduct','BackendController@GetEditProduct');
-Route::get('edituser','BackendController@GetEditUser');
-Route::get('index','BackendController@GetIndex');
-Route::get('listproduct','BackendController@GetListProduct');
-Route::get('listuser','BackendController@GetListUser');
-Route::get('login','BackendController@GetLogin');
-Route::get('order','BackendController@GetOrder');
-Route::get('processed','BackendController@GetProcessed');
+//product   
+
+Route::group(['prefix' => 'product'], function () {
+    Route::get('detail', 'frontend\ProductController@GetDetail');
+    Route::get('shop', 'frontend\ProductController@GetShop');
+});
+
+//checkout
+Route::group(['prefix' => 'checkout'], function () {
+    Route::get('', 'frontend\CheckoutController@GetCheckout');
+    Route::post('', 'frontend\CheckoutController@PostCheckout');
+    Route::get('complete', 'frontend\CheckoutController@GetComplete');
+});
+//cart
+Route::group(['prefix' => 'cart'], function () {
+    Route::get('', 'frontend\CartController@GetCart');
+});
+
+
+
+//Route Backend 
+Route::group(['prefix' => 'admin','middleware'=>'CheckLogin'], function () {
+
+    Route::get('','backend\IndexController@GetIndex'); // vào trang index
+    Route::get('logout', 'backend\IndexController@Logout');
+
+
+    //category
+    Route::group(['prefix' => 'category'], function () {
+        Route::get('','backend\CategoryController@GetCategory');
+        Route::post('','backend\CategoryController@PostCategory');
+        Route::get('edit','backend\CategoryController@GetEditCategory');
+    });
+
+    //user
+    Route::group(['prefix' => 'user'], function () {
+        Route::get('add','backend\UserController@GetAddUser');
+        Route::post('add','backend\UserController@PostAddUser');
+
+        Route::get('edit','backend\UserController@GetEditUser');
+        Route::get('','backend\UserController@GetListUser');    
+    });
+
+    //product
+    Route::group(['prefix' => 'product'], function () {
+        Route::get('add','backend\ProductController@GetAddProduct');
+        Route::post('add','backend\ProductController@PostAddProduct');
+        Route::get('edit','backend\ProductController@GetEditProduct');
+        Route::get('','backend\ProductController@GetListProduct');
+    });
+    
+    //order
+    Route::group(['prefix' => 'order'], function () {
+        Route::get('detail','backend\OrderController@GetDetailOrder');
+        Route::get('','backend\OrderController@GetOrder');
+        Route::get('processed','backend\OrderController@GetProcessed');
+    });
+});
+
+

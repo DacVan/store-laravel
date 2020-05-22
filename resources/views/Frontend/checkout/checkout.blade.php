@@ -27,37 +27,40 @@
 				<div class="row">
 					<div class="col-md-7">
 							<form method="post" class="colorlib-form">
+								@csrf
 							<h2>Chi tiết thanh toán</h2>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="fname">Họ & Tên</label>
-										<input type="text" name="full" class="form-control" placeholder="Full Name">
+										<input type="text" name="fullname" class="form-control" placeholder="Full Name">
+										{!! ShowError($errors,"fullname") !!}
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
 										<label for="fname">Địa chỉ</label>
-										<input type="text" name="address" class="form-control"
-											placeholder="Nhập địa chỉ của bạn">
+										<input type="text" name="address" class="form-control" placeholder="Nhập địa chỉ của bạn">
+											{!! ShowError($errors,"address") !!}
 									</div>
 								</div>
 
 								<div class="form-group">
 									<div class="col-md-6">
 										<label for="email">Địa chỉ email</label>
-										<input type="email" name="email" class="form-control"
-											placeholder="Ex: youremail@domain.com">
+										<input type="email" name="email" class="form-control" placeholder="Ex: youremail@domain.com">
+										{!! ShowError($errors,"email") !!}
+										
 									</div>
 									<div class="col-md-6">
 										<label for="Phone">Số điện thoại</label>
-										<input type="text" name="phone" class="form-control"
-											placeholder="Ex: 0123456789">
+										<input type="text" name="phone" class="form-control" placeholder="Ex: 0123456789">
+										{!! ShowError($errors,"phone") !!}
+										
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="col-md-12">
-
 									</div>
 								</div>
 							</div>

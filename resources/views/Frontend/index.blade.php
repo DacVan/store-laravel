@@ -1,9 +1,8 @@
 @extends('frontend.master.master')
-@section('title','Trang chủ')
+@section('title','Trang Chủ')
 @section('content')
-	
-	<!-- main -->
-	<div id="colorlib-featured-product">
+		<!-- main -->
+		<div id="colorlib-featured-product">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
@@ -40,9 +39,9 @@
 					</div>
 				</div>
 			</div>
-	</div>
+		</div>
 
-	<div id="colorlib-intro" class="colorlib-intro" style="background-image: url(images/banner-1.jpg);"
+		<div id="colorlib-intro" class="colorlib-intro" style="background-image: url(images/banner-1.jpg);"
 			data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
@@ -72,8 +71,9 @@
 					</div>
 				</div>
 			</div>
-	</div>
-	<div class="colorlib-shop">
+		</div>
+
+		<div class="colorlib-shop">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center colorlib-heading">
@@ -162,8 +162,8 @@
 					</div>
 				</div>
 			</div>
-	</div>
-	<div class="colorlib-shop">
+		</div>
+		<div class="colorlib-shop">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center colorlib-heading">
@@ -341,9 +341,6 @@
 					</div>
 				</div>
 			</div>
-	</div>
-	<!-- end main -->
-
+		</div>
+		<!-- end main -->
 @endsection
-
-		

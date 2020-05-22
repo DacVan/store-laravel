@@ -10,6 +10,8 @@
         </div>
         <!--/.row-->
         <div class="row">
+            <form method="post" enctype="multipart/form-data">
+                @csrf
             <div class="col-xs-6 col-md-12 col-lg-12">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Thêm sản phẩm</div>
@@ -28,15 +30,19 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Mã sản phẩm</label>
-                                            <input type="text" name="code" class="form-control">
+                                            <input type="text" name="code" class="form-control" value="{{ old('code') }}">
+                                            {!! ShowError($errors,'code') !!}
                                         </div>
                                         <div class="form-group">
                                             <label>Tên sản phẩm</label>
-                                            <input type="text" name="name" class="form-control">
+                                            <input type="text" name="name" class="form-control" value="{{ old('name') }}" >
+                                            {!! ShowError($errors,'name') !!}
+                                            
                                         </div>
                                         <div class="form-group">
                                             <label>Giá sản phẩm (Giá chung)</label>
-                                            <input type="number" name="price" class="form-control">
+                                            <input type="number" name="price" class="form-control" value="{{ old('price') }}">
+                                            {!! ShowError($errors,'price') !!}
                                         </div>
                                         <div class="form-group">
                                             <label>Sản phẩm có nổi bật</label>
@@ -56,6 +62,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label>Ảnh sản phẩm</label>
+                                            {!! ShowError($errors,'img') !!}
                                             <input id="img" type="file" name="img" class="form-control hidden"
                                                 onchange="changeImg(this)">
                                             <img id="avatar" class="thumbnail" width="100%" height="350px" src="img/import-img.png">
@@ -86,6 +93,7 @@
                 </div>
 
             </div>
+            </form>
         </div>
 
         <!--/.row-->

@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
-    <base href="{{asset("")."backend/"}}">
+    <base href="{{asset("")."public/"."backend/"}}">
 	<!-- css -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	

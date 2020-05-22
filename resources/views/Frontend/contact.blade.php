@@ -22,7 +22,7 @@
 										href="mailto:info@yoursite.com">info@yoursite.com</a></p>
 							</div>
 							<div class="col-md-3">
-								<p><span><i class="icon-globe"></i></span> <a href="#">http://thanhcong.edu.vn</a></p>
+								<p><span><i class="icon-globe"></i></span> <a href="#">http://dacvan.edu.vn</a></p>
 							</div>
 						</div>
 					</div>
