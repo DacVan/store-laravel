@@ -19,6 +19,6 @@ class OrderController extends Controller
 
     function GetProcessed()
     {
-        return view("backend.order.order");
+        return view("backend.order.processed");
     }
 }

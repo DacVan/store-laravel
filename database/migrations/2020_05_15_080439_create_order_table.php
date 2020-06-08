@@ -14,18 +14,13 @@ class CreateOrderTable extends Migration
     public function up()
     {
         Schema::create('order', function (Blueprint $table) {
-            $table->increments('OrderID');
-            $table->tinyInteger('OrderStatus')->unsigned();
-            $table->string('OrderCustomer');
-            $table->string('OrderAddress');
-            $table->string('OrderPhone');
-            $table->date('OrderDate')->default(now());
-            $table->decimal('OrderTotal', 18, 0)->nullable();
-    
-            //tạo liên kết đến khóa chính bảng payment_method
-            $table->integer('PayID')->unsigned();
-            $table->foreign('PayID')->references('PayID')->on('payment_method')->onDelete('cascade');
-
+            $table->increments('id');
+            $table->string('full')->nullable();
+            $table->string('address')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone');
+            $table->decimal('total', 18, 0)->nullable();
+            $table->tinyInteger('state')->unsigned();
             $table->timestamps();
         });
     }

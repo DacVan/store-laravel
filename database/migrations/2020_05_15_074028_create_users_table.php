@@ -15,15 +15,14 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('fullname');
-            $table->string('address');
-            $table->string('phone');
-            $table->string('password');
             $table->string('email',50)->unique();
-            $table->tinyInteger('level')->unsigned()->default(1);
+            $table->string('password');
+            $table->string('full')->nullable();
+            $table->string('address')->nullable();
+            $table->string('phone')->nullable();
+            $table->tinyInteger('level');
             //tạo cột tên là reamember_token
             $table->rememberToken();
-            $table->timestamps();
         });
     }
 

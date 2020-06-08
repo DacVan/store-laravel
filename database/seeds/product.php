@@ -13,14 +13,14 @@ class product extends Seeder
     {
         DB::table('product')->delete();
         DB::table('product')->insert([
-            ['ProID'=>1,'ProCode'=>'SP01','ProName'=>'Áo Nữ Sơ Mi Chấm Bi','ProSlug'=>'ao-nu-so-mi-cham-bi','ProPrice'=>50000,'ProFeatured'=>1,'ProStatus'=>1,'ProImg'=>'Ao_nu_so_mi_cham_bi.jpg','CateID'=>6],
-            ['ProID'=>2,'ProCode'=>'SP02','ProName'=>'Áo Nữ Phối Viền','ProSlug'=>'ao-nu-phoi-vien','ProPrice'=>60000,'ProFeatured'=>1,'ProStatus'=>0,'ProImg'=>'ao-nu-phoi-vien.jpg','CateID'=>6],
-            ['ProID'=>3,'ProCode'=>'SP03','ProName'=>'Áo Sơ Mi Có Cổ Đúc','ProSlug'=>'ao-so-mi-co-co-duc','ProPrice'=>70000,'ProFeatured'=>0,'ProStatus'=>1,'ProImg'=>'ao-nu-so-mi-co-co-duc.jpg','CateID'=>6],
-            ['ProID'=>4,'ProCode'=>'SP04','ProName'=>'Áo sơ mi caro xám Xanh','ProSlug'=>'ao-so-mi-caro-xam-xanh','ProPrice'=>80000,'ProFeatured'=>0,'ProStatus'=>1,'ProImg'=>'ao-so-mi-ca-ro-xam-xanh-asm1228-10199.jpg','CateID'=>2],
-            ['ProID'=>5,'ProCode'=>'SP05','ProName'=>'Áo Sơ Mi Hoạ Tiết Đen','ProSlug'=>'ao-so-mi-hoa-tiet-den','ProPrice'=>90000,'ProFeatured'=>0,'ProStatus'=>1,'ProImg'=>'ao-so-mi-hoa-tiet-den-asm1223-10191.jpg','CateID'=>2],
-            ['ProID'=>6,'ProCode'=>'SP06','ProName'=>'Áo Sơ Mi Trắng Kem','ProSlug'=>'ao-so-mi-trang-kem','ProPrice'=>100000,'ProFeatured'=>1,'ProStatus'=>1,'ProImg'=>'ao-so-mi-trang-kem-asm836-8193.jpg','CateID'=>2],
-            ['ProID'=>7,'ProCode'=>'SP07','ProName'=>'Quần kaki Đỏ Nam','ProSlug'=>'quan-kaki-do-nam','ProPrice'=>110000,'ProFeatured'=>1,'ProStatus'=>1,'ProImg'=>'quan-kaki-do-man-qk162-8273.jpg','CateID'=>3],
-            ['ProID'=>8,'ProCode'=>'SP08','ProName'=>'Quần kaki Xám','ProSlug'=>'quan-kaki-xam','ProPrice'=>120000,'ProFeatured'=>1,'ProStatus'=>1,'ProImg'=>'quan-kaki-xam-chuot-dam-qk171-9770.jpg','CateID'=>3],
+            ['id'=>1,'code'=>'SP01','name'=>'Áo Nữ Sơ Mi Chấm Bi','slug'=>'ao-nu-so-mi-cham-bi','price'=>50000,'featured'=>1,'state'=>1,'img'=>'Ao_nu_so_mi_cham_bi.jpg','category_id'=>6],
+            ['id'=>2,'code'=>'SP02','name'=>'Áo Nữ Phối Viền','slug'=>'ao-nu-phoi-vien','price'=>60000,'featured'=>1,'state'=>0,'img'=>'ao-nu-phoi-vien.jpg','category_id'=>6],
+            ['id'=>3,'code'=>'SP03','name'=>'Áo Sơ Mi Có Cổ Đúc','slug'=>'ao-so-mi-co-co-duc','price'=>70000,'featured'=>0,'state'=>1,'img'=>'ao-nu-so-mi-co-co-duc.jpg','category_id'=>6],
+            ['id'=>4,'code'=>'SP04','name'=>'Áo sơ mi caro xám Xanh','slug'=>'ao-so-mi-caro-xam-xanh','price'=>80000,'featured'=>0,'state'=>1,'img'=>'ao-so-mi-ca-ro-xam-xanh-asm1228-10199.jpg','category_id'=>2],
+            ['id'=>5,'code'=>'SP05','name'=>'Áo Sơ Mi Hoạ Tiết Đen','slug'=>'ao-so-mi-hoa-tiet-den','price'=>90000,'featured'=>0,'state'=>1,'img'=>'ao-so-mi-hoa-tiet-den-asm1223-10191.jpg','category_id'=>2],
+            ['id'=>6,'code'=>'SP06','name'=>'Áo Sơ Mi Trắng Kem','slug'=>'ao-so-mi-trang-kem','price'=>100000,'featured'=>1,'state'=>1,'img'=>'ao-so-mi-trang-kem-asm836-8193.jpg','category_id'=>2],
+            ['id'=>7,'code'=>'SP07','name'=>'Quần kaki Đỏ Nam','slug'=>'quan-kaki-do-nam','price'=>110000,'featured'=>1,'state'=>1,'img'=>'quan-kaki-do-man-qk162-8273.jpg','category_id'=>3],
+            ['id'=>8,'code'=>'SP08','name'=>'Quần kaki Xám','slug'=>'quan-kaki-xam','price'=>120000,'featured'=>1,'state'=>1,'img'=>'quan-kaki-xam-chuot-dam-qk171-9770.jpg','category_id'=>3],
         ]);
     }
 }

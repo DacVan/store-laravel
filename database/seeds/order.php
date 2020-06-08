@@ -12,13 +12,14 @@ class order extends Seeder
     public function run()
     {
         DB::table('order')->delete();
-        DB::table('order')->insert(
-            [
-                ['OrderID'=>1,'OrderCustomer'=>'Nguyễn Đắc Văn','OrderAddress'=>'Bắc Cạn','OrderPhone'=>'03658879942','OrderDate'=>now(),'OrderTotal'=>110000,'OrderStatus'=>1,'PayID'=>1],
-                ['OrderID'=>2,'OrderCustomer'=>'Đặng Thị Thư','OrderAddress'=>'Bắc Ninh','OrderPhone'=>'03564478214','OrderDate'=>now(),'OrderTotal'=>110000,'OrderStatus'=>1,'PayID'=>1],
-                ['OrderID'=>3,'OrderCustomer'=>'Trần Minh Tuấn','OrderAddress'=>'Ninh Bình','OrderPhone'=>'03214789547','OrderDate'=>now(),'OrderTotal'=>110000,'OrderStatus'=>0,'PayID'=>1],
-
-            ]
-        );
+       DB::table('order')->insert(
+           [
+               ['id'=>1,'full'=>'Nguyễn Văn Đạt','address'=>'Bắc Cạn','email'=>'vandat@gmail.com','phone'=>'03658879942','total'=>110000,'state'=>1],
+               ['id'=>2,'full'=>'Nguyễn Tùng Lâm','address'=>'Bắc Ninh','email'=>'tunglam@gmail.com','phone'=>'03564478214','total'=>110000,'state'=>1],
+               ['id'=>3,'full'=>'Võ Văn Minh','address'=>'Ninh Bình','email'=>'vanminh@gmail.com','phone'=>'03214789547','total'=>110000,'state'=>2],
+               ['id'=>4,'full'=>'Nguyễn thế Kiên','address'=>'Lạng Sơn','email'=>'thekien@gmail.com','phone'=>'03525246673','total'=>110000,'state'=>2],
+               ['id'=>5,'full'=>'Trần Đại Công','address'=>'Văn Giang','email'=>'daicong@gmail.com','phone'=>'0354879500','total'=>110000,'state'=>2]
+           ]
+       );
     }
 }

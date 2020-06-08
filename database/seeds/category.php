@@ -11,14 +11,14 @@ class category extends Seeder
      */
     public function run()
     {
-        DB::table('category')->delete();   
+        DB::table('category')->delete();
         DB::table('category')->insert([
-            ['CateID'=>1,'CateName'=>'Nam','CateSlug'=>'nam','CateParent'=>0],
-            ['CateID'=>2,'CateName'=>'Áo Nam','CateSlug'=>'ao-nam','CateParent'=>1],
-            ['CateID'=>3,'CateName'=>'Quần Nam','CateSlug'=>'quan-nam','CateParent'=>1],
-            ['CateID'=>5,'CateName'=>'Nữ','CateSlug'=>'nu','CateParent'=>0],
-            ['CateID'=>6,'CateName'=>'Áo Nữ','CateSlug'=>'ao-nu','CateParent'=>5],
-            ['CateID'=>7,'CateName'=>'Quần Nữ','CateSlug'=>'quan-nu','CateParent'=>5]
+            ['id'=>1,'name'=>'Nam','slug'=>'nam','parent'=>0],
+            ['id'=>2,'name'=>'Áo Nam','slug'=>'ao-nam','parent'=>1],
+            ['id'=>3,'name'=>'Quần Nam','slug'=>'quan-nam','parent'=>1],
+            ['id'=>5,'name'=>'Nữ','slug'=>'nu','parent'=>0],
+            ['id'=>6,'name'=>'Áo Nữ','slug'=>'ao-nu','parent'=>5],
+            ['id'=>7,'name'=>'Quần Nữ','slug'=>'quan-nu','parent'=>5]
         ]);
     }
 }

@@ -22,7 +22,7 @@ Route::get('about', 'frontend\IndexController@GetAbout');
 Route::get('contact', 'frontend\IndexController@GetContact');
 
 //login
-Route::get('login','frontend\LoginController@GetLogin');
+Route::get('login','frontend\LoginController@GetLogin')->middleware('CheckLogout');
 Route::post('login', 'frontend\LoginController@PostLogin');
 
 //product   
@@ -56,7 +56,10 @@ Route::group(['prefix' => 'admin','middleware'=>'CheckLogin'], function () {
     Route::group(['prefix' => 'category'], function () {
         Route::get('','backend\CategoryController@GetCategory');
         Route::post('','backend\CategoryController@PostCategory');
-        Route::get('edit','backend\CategoryController@GetEditCategory');
+        Route::get('edit/{id_category}','backend\CategoryController@GetEditCategory');
+        Route::post('edit/{id_category}','backend\CategoryController@PostEditCategory');
+        Route::get('del/{id_category}','backend\CategoryController@DelCategory');
+
     });
 
     //user

@@ -25,7 +25,7 @@ class LoginController extends Controller
        else
        {
            //echo "Dang nhap sai" ;
-           return redirect()->back();
+           return redirect()->back()->with("Thong bao","Tài khoản hoặc mật khẩu không chính xác");
        }
     }
 }
