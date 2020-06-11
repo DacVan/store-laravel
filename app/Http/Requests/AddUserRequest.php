@@ -28,7 +28,7 @@ class AddUserRequest extends FormRequest
             'password'=>'required|min:5',
             'fullname'=>'required|min:4',
             'address'=>'required',
-            'phone'=>'required|min:7|unique:users,email',
+            'phone'=>'required|min:7|unique:users,phone',
         ];
     }
     public function messages()

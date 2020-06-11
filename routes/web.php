@@ -67,7 +67,11 @@ Route::group(['prefix' => 'admin','middleware'=>'CheckLogin'], function () {
         Route::get('add','backend\UserController@GetAddUser');
         Route::post('add','backend\UserController@PostAddUser');
 
-        Route::get('edit','backend\UserController@GetEditUser');
+        Route::get('edit/{id_user}','backend\UserController@GetEditUser');
+        Route::post('edit/{id_user}','backend\UserController@PostEditUser');
+
+        Route::get('del/{id_user}','backend\UserController@DelUser');
+
         Route::get('','backend\UserController@GetListUser');    
     });
 
@@ -75,8 +79,10 @@ Route::group(['prefix' => 'admin','middleware'=>'CheckLogin'], function () {
     Route::group(['prefix' => 'product'], function () {
         Route::get('add','backend\ProductController@GetAddProduct');
         Route::post('add','backend\ProductController@PostAddProduct');
-        Route::get('edit','backend\ProductController@GetEditProduct');
+        Route::get('edit/{id_product}','backend\ProductController@GetEditProduct');
+        Route::post('edit/{id_product}','backend\ProductController@PostEditProduct');
         Route::get('','backend\ProductController@GetListProduct');
+        Route::get('del/{id_product}','backend\ProductController@DelProduct');
     });
     
     //order

@@ -43,7 +43,7 @@ class CategoryController extends Controller
             return redirect()->back()->with('error','Giao diện web không hỗ trợ Danh mục lớn hơn 2 Cấp');
         }
           
-        $cate=category::find($id_category);      
+        $cate=category::find($id_category);     
         $cate->name=$r->name;
         $cate->slug= str_slug($r->name);
         $cate->parent=$r->parent;
