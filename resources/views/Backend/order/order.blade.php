@@ -35,22 +35,26 @@
 										</tr>
 									</thead>
 									<tbody>
+										@foreach ($orders as $item)
 										<tr>
-											<td>1</td>
-											<td>Nguyễn Thế Phúc</td>
-											<td>0356653300</td>
-											<td>Thường tín</td>
+											<td>{{ $item->id }}</td>
+											<td>{{ $item->full }}</td>
+											<td>{{ $item->phone }}</td>
+											<td>{{ $item->address }}</td>
 											<td>
-												<a href="../../admin/order/detail" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i>Xử lý</a>
-
+												<a href="../../admin/order/detail/{{ $item->id }}" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i>Xử lý</a>
 											</td>
 										</tr>
+										@endforeach
 
 									</tbody>
 								</table>
 							</div>
 						</div>
 						<div class="clearfix"></div>
+						<div align="right">
+							{{ $orders->links() }}
+						</div>
 					</div>
 				</div>
 			</div>
