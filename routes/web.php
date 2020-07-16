@@ -21,6 +21,11 @@ Route::get('', 'frontend\IndexController@GetIndex');
 Route::get('about', 'frontend\IndexController@GetAbout');
 Route::get('contact', 'frontend\IndexController@GetContact');
 
+Route::get('{slug_cate}.html','frontend\IndexController@GetPrdCate');
+Route::get('filter','frontend\IndexController@GetFilter');
+
+
+
 //login
 Route::get('login','frontend\LoginController@GetLogin')->middleware('CheckLogout');
 Route::post('login', 'frontend\LoginController@PostLogin');
@@ -28,7 +33,7 @@ Route::post('login', 'frontend\LoginController@PostLogin');
 //product   
 
 Route::group(['prefix' => 'product'], function () {
-    Route::get('detail', 'frontend\ProductController@GetDetail');
+    Route::get('{slug_prd}.html', 'frontend\ProductController@GetDetail');
     Route::get('shop', 'frontend\ProductController@GetShop');
 });
 
@@ -36,11 +41,14 @@ Route::group(['prefix' => 'product'], function () {
 Route::group(['prefix' => 'checkout'], function () {
     Route::get('', 'frontend\CheckoutController@GetCheckout');
     Route::post('', 'frontend\CheckoutController@PostCheckout');
-    Route::get('complete', 'frontend\CheckoutController@GetComplete');
+    Route::get('complete/{order_id}', 'frontend\CheckoutController@GetComplete');
 });
 //cart
 Route::group(['prefix' => 'cart'], function () {
     Route::get('', 'frontend\CartController@GetCart');
+    Route::get('add', 'frontend\CartController@AddCart');
+    Route::get('update/{rowId}/{qty}','frontend\CartController@UpdateCart');
+    Route::get('del/{rowId}','frontend\CartController@DelCart');
 });
 
 
@@ -91,7 +99,6 @@ Route::group(['prefix' => 'admin','middleware'=>'CheckLogin'], function () {
         Route::get('','backend\OrderController@GetOrder');
         Route::get('processed','backend\OrderController@GetProcessed');
         Route::get('paid/{id_order}','Backend\OrderController@Paid');
-
     });
 });
 

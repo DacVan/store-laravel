@@ -73,7 +73,7 @@ class ProductController extends Controller
            
             $file=$r->img;
             $file_name=str_slug($r->name).'.'.$file->getClientOriginalExtension();
-            $file->move('backend/img',$file_name);
+            $file->move('public/backend/img',$file_name);
             $prd->img=$file_name;
         }
 

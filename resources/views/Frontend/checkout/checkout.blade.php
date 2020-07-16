@@ -73,12 +73,14 @@
 								<li>
 
 									<ul>
-										<li><span>1 x Tên sản phẩm</span> <span>₫ 990.000</span></li>
-										<li><span>1 x Tên sản phẩm</span> <span>₫ 780.000</span></li>
+										@foreach ($cart as $item)
+											<li><span>{{ $item->qty }} x {{ $item->name }}</span> <span>{{ number_format($item->qty*$item->price,0,"",".") }}₫</span></li>
+										@endforeach
+										
 									</ul>
 								</li>
 
-								<li><span>Tổng tiền đơn hàng</span> <span>₫ 1.370.000</span></li>
+								<li><span>Tổng tiền đơn hàng</span> <span> {{ $total }} ₫</span></li>
 							</ul>
 						</div>
 

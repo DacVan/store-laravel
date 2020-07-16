@@ -7,9 +7,8 @@
 	<title>Login</title>
     <base href="{{ asset("")."public/"."backend/" }}">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	
 	<link href="css/styles.css" rel="stylesheet">
-
+	
 </head>
 
 <body>
