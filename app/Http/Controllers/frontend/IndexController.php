@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     public function GetIndex()
     {
-        $data['prd_new']=product::orderby('id','desc')->take(8)->get();
+        $data['prd_new']=product::orderby('id','desc')->take(4)->get();
         $data['prd_featured']=product::where('featured',1)->take(4)->get();
        return view('frontend.index',$data);
     }

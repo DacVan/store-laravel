@@ -14,11 +14,11 @@
 * ======================================================= */
 
 body {
-    font-family: "Roboto", Arial, sans-serif;
-    font-weight: 300;
+    font-family: "Candara", sans-serif;
+    font-weight: 900;
     font-size: 14px;
-    line-height: 1.7;
-    color: #595959;
+    line-height: 1.4;
+    color: #252a2b;
     background: #fff;
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 a {
-    color: #FF9600;
+    color: #FF3333;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
@@ -61,7 +61,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #FF9600;
+    color: #FF3333;
     outline: none;
     text-decoration: none;
 }
@@ -85,17 +85,17 @@ figure {
 
 ::-webkit-selection {
     color: #fff;
-    background: #FF9600;
+    background: #FF3333;
 }
 
 ::-moz-selection {
     color: #fff;
-    background: #FF9600;
+    background: #FF3333;
 }
 
 ::selection {
     color: #fff;
-    background: #FF9600;
+    background: #FF3333;
 }
 
 @media screen and (max-width: 768px) {
@@ -157,7 +157,7 @@ figure {
 }
 
 .colorlib-nav ul li a:hover {
-    color: #FF9600;
+    color: #FF3333;
 }
 
 .colorlib-nav ul li.has-dropdown {
@@ -176,7 +176,7 @@ figure {
     top: 40px;
     left: 0;
     text-align: left;
-    background: #000;
+    background: #fff;
     padding: 20px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -196,7 +196,7 @@ figure {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-bottom-color: #000;
+    border-bottom-color: #fff;
     border-width: 8px;
     margin-left: -8px;
 }
@@ -221,12 +221,12 @@ figure {
 }
 
 .colorlib-nav ul li.has-dropdown .dropdown li a:hover {
-    color: #fff;
+    color: #FF3333;
 }
 
 .colorlib-nav ul li.has-dropdown:hover a,
 .colorlib-nav ul li.has-dropdown:focus a {
-    color: #FF9600;
+    color: #FF3333;
 }
 
 .colorlib-nav ul li.btn-cta a {
@@ -235,7 +235,7 @@ figure {
 }
 
 .colorlib-nav ul li.btn-cta a span {
-    background: #FF9600;
+    background: #FF3333;
     padding: 4px 10px;
     display: -moz-inline-stack;
     display: inline-block;
@@ -257,7 +257,7 @@ figure {
 }
 
 .colorlib-nav ul li.active>a {
-    color: #FF9600 !important;
+    color: #FF3333 !important;
     position: relative;
 }
 
@@ -313,7 +313,7 @@ figure {
     display: table-cell;
     vertical-align: middle;
     font-size: 40px;
-    color: #FF9600;
+    color: #FF3333;
 }
 
 .colorlib-video .video-overlay {
@@ -341,7 +341,7 @@ figure {
 }
 
 #colorlib-hero {
-    height: 650px;
+    /* height: 650px; */
     background: #fff url(../images/loader.gif) no-repeat center center;
     width: 100%;
     float: left;
@@ -372,7 +372,7 @@ figure {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 650px;
+    height: 480px;
     position: relative;
 }
 
@@ -408,7 +408,7 @@ figure {
 #colorlib-hero .flexslider .flex-control-nav li a.flex-active {
     cursor: pointer;
     background: transparent;
-    background: #FF9600;
+    background: #FF3333;
 }
 
 #colorlib-hero .flexslider .flex-direction-nav {
@@ -508,7 +508,7 @@ figure {
 }
 
 #colorlib-hero .flexslider .slider-text>.slider-text-inner .btn.btn-learn {
-    background: #FF9600;
+    background: #FF3333;
     color: #fff;
 }
 
@@ -602,7 +602,7 @@ figure {
 
 .colorlib-shop .icon i {
     font-size: 100px;
-    color: #FF9600;
+    color: #FF3333;
 }
 
 .f-product-1 {
@@ -666,7 +666,7 @@ figure {
 
 .product-entry .product-img .tag .new {
     font-size: 11px;
-    background: #FF9600;
+    background: #FF3333;
     color: #fff;
     padding: .3em .5em;
     -webkit-border-radius: 2px;
@@ -720,7 +720,7 @@ figure {
 }
 
 .product-entry .product-img .cart p span a:hover {
-    background: #FF9600;
+    background: #FF3333;
 }
 
 .product-entry .desc h3 {
@@ -735,7 +735,7 @@ figure {
 }
 
 .product-entry .desc .price span {
-    color: #FF9600;
+    color: #FF3333;
     font-weight: 400;
 }
 
@@ -1022,7 +1022,7 @@ figure {
 }
 
 .nav-tabs li.active a {
-    background: #FF9600;
+    background: #FF3333;
     border: none;
     color: #fff;
     bottom: 0 !important;
@@ -1040,12 +1040,12 @@ figure {
     margin: 0 auto;
     border-style: solid;
     border-width: 10px 10px 0 10px;
-    border-color: #FF9600 transparent transparent transparent;
+    border-color: #FF3333 transparent transparent transparent;
 }
 
 .nav-tabs li.active a:hover,
 .nav-tabs li.active a:focus {
-    background: #FF9600;
+    background: #FF3333;
     border: none;
     color: #fff;
 }
@@ -1112,7 +1112,7 @@ figure {
 }
 
 .process.active p span {
-    color: #FF9600;
+    color: #FF3333;
 }
 
 .product-cart,
@@ -1285,7 +1285,7 @@ figure {
 }
 
 .total-wrap .total .sub {
-    border-bottom: 1px solid #FF9600;
+    border-bottom: 1px solid #FF3333;
     margin-bottom: 10px;
 }
 
@@ -1305,7 +1305,7 @@ figure {
 }
 
 .total-wrap .total .grand-total p span:last-child {
-    color: #FF9600;
+    color: #FF3333;
     font-weight: 500;
 }
 
@@ -1470,7 +1470,7 @@ figure {
     margin: 0;
     line-height: 1;
     display: inline-block;
-    color: #FF9600;
+    color: #FF3333;
 }
 
 .text-salebox .text-lefts .sale-box .sup-1 {
@@ -1480,7 +1480,7 @@ figure {
     left: 100%;
     display: block;
     line-height: 1;
-    color: #FF9600;
+    color: #FF3333;
     font-weight: 700;
 }
 
@@ -1529,8 +1529,8 @@ figure {
 }
 
 .text-salebox .text-rights .btn-outline {
-    border: 1px solid #FF9600 !important;
-    color: #FF9600;
+    border: 1px solid #FF3333 !important;
+    color: #FF3333;
 }
 
 .sidebar {
@@ -1576,7 +1576,7 @@ figure {
 .sidebar .colorlib-form-2 .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
-    border-color: #FF9600 !important;
+    border-color: #FF3333 !important;
 }
 
 .sidebar .colorlib-form-2 .form-control::-webkit-input-placeholder {
@@ -1636,7 +1636,7 @@ figure {
 }
 
 .sidebar .colorlib-form-2 .rate i {
-    color: #FF9600;
+    color: #FF3333;
     margin: 0 5px;
 }
 
@@ -1664,7 +1664,7 @@ figure {
 }
 
 .color-wrap p.color-desc .color-1 {
-    background: #FF9600;
+    background: #FF3333;
 }
 
 .color-wrap p.color-desc .color-2 {
@@ -1708,7 +1708,7 @@ figure {
 }
 
 .size-wrap p.size-desc .size:hover {
-    color: #FF9600;
+    color: #FF3333;
 }
 
 .fancy-collapse-panel .panel-default>.panel-heading {
@@ -1728,7 +1728,7 @@ figure {
     font-size: 12px;
     text-transform: uppercase;
     background: transparent;
-    color: #FF9600;
+    color: #FF3333;
     position: relative;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
@@ -1784,7 +1784,7 @@ figure {
 }
 
 .panel-body ul li a:hover {
-    color: #FF9600;
+    color: #FF3333;
 }
 
 .panel-group {
@@ -1835,7 +1835,7 @@ figure {
 .colorlib-form .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
-    border-color: #FF9600;
+    border-color: #FF3333;
 }
 
 .colorlib-form .form-control::-webkit-input-placeholder {
@@ -2049,7 +2049,7 @@ figure {
     top: -2.5em;
     left: 0;
     padding: .5em .7em;
-    background: #FF9600;
+    background: #FF3333;
 }
 
 .article-entry .desc .meta span {
@@ -2240,7 +2240,7 @@ input[type="text"] {
     display: inline-block;
     zoom: 1;
     *display: inline;
-    color: #FF9600;
+    color: #FF3333;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -2274,7 +2274,7 @@ input[type="text"] {
     content: '';
     width: 60px;
     height: 2px;
-    background: #FF9600;
+    background: #FF3333;
 }
 
 .colorlib-heading h2 span:before {
@@ -2285,11 +2285,11 @@ input[type="text"] {
     content: '';
     width: 60px;
     height: 2px;
-    background: #FF9600;
+    background: #FF3333;
 }
 
 #colorlib-subscribe {
-    background: #FF9600;
+    background: #FFDD00;
     position: relative;
     padding: 3em;
 }
@@ -2543,7 +2543,7 @@ input[type="text"] {
     width: 50px;
     height: 50px;
     display: table;
-    background: #FF9600;
+    background: #FF3333;
     color: #fff;
     text-align: center;
     -webkit-border-radius: 4px;
@@ -2707,9 +2707,9 @@ input[type="text"] {
 
 .pagination li a:hover,
 .pagination li a:focus {
-    background: #FF9600;
+    background: #FF3333;
     color: #fff;
-    border: 1px solid #FF9600;
+    border: 1px solid #FF3333;
 }
 
 @media screen and (max-width: 768px) {
@@ -2719,16 +2719,16 @@ input[type="text"] {
 }
 
 .pagination li.active a {
-    border: 1px solid #FF9600;
-    background: #FF9600;
+    border: 1px solid #FF3333;
+    background: #FF3333;
     color: #000;
 }
 
 .pagination li.active a:hover,
 .pagination li.active a:focus {
-    background: #FF9600;
+    background: #FF3333;
     color: #000;
-    border: 1px solid #FF9600;
+    border: 1px solid #FF3333;
 }
 
 .btn {
@@ -2763,9 +2763,9 @@ input[type="text"] {
 }
 
 .btn-primary {
-    background: #FF9600;
+    background: #FF3333;
     color: #fff;
-    border: 1px solid #FF9600;
+    border: 1px solid #FF3333;
 }
 
 .btn-primary:hover,
@@ -2777,14 +2777,14 @@ input[type="text"] {
 
 .btn-primary.btn-outline {
     background: transparent;
-    color: #FF9600;
-    border: 1px solid #FF9600;
+    color: #FF3333;
+    border: 1px solid #FF3333;
 }
 
 .btn-primary.btn-outline:hover,
 .btn-primary.btn-outline:focus,
 .btn-primary.btn-outline:active {
-    background: #FF9600;
+    background: #FF3333;
     color: #fff;
 }
 
@@ -2953,7 +2953,7 @@ input[type="text"] {
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    border-color: #FF9600;
+    border-color: #FF3333;
 }
 
 .row-pb-lg {
